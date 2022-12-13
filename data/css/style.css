@@ -78,16 +78,6 @@ body {
     display: none;
 }
 
-#github {
-    font-size: 15px;
-    color: white;
-    float: right;
-}
-
-#github:hover {
-    background-color: white;
-    color: black;
-}
 
 @media screen and (max-width: 600px) {
     .topnav a:not(:first-child) {
