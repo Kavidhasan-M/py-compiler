@@ -71,30 +71,6 @@ function toggleConsole() {
     editor.resize()
 }
 
-function saveCode() {
-    localStorage['saveKey'] = editor.getValue();
-    window.alert("Code saved!")
-}
-
-function downloadCode() {
-    var prog = editor.getValue();
-    var hiddenElement = document.createElement('a');
-    hiddenElement.href = 'data:attachment/text,' + encodeURI(prog);
-    hiddenElement.download = 'download.py';
-    if (confirm('Download Code?')) {
-        hiddenElement.click();
-    }
-}
-
-function shareCode() {
-    var link = window.location.href.split('?')[0] + "?code=" + encodeURIComponent(editor.getValue());
-    window.prompt("Copy link to clipboard: Ctrl+C, Enter", link);
-}
-
-function kbShortcuts() {
-    window.alert("Run : Ctrl+Enter\nOpen : Ctrl+Shift+O\nConsole : Ctrl+Shift+E\nSave : Ctrl+Shift+S\nDownload : Ctrl+Shift+D\nShare : Ctrl+Shift+A\nKeyboard : Ctrl+Shift+K\nSettings : Ctrl+,")
-}
-
 function aceSettings() {
     editor.execCommand("showSettingsMenu")
 }
